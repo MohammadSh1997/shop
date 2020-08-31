@@ -48,10 +48,52 @@ main {
 
 .content {
   display: flex;
+  margin: 20px;
 }
 
 .products {
-  flex: 5;
+  flex: 5 1;
+}
+
+.products-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item-card {
+  width: 30%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-price {
+  width: 100%;
+  margin: 7px 0;
+}
+
+.product-data button {
+  background-color: #ffc000;
+  border: 1px solid #333;
+  color: #333;
+  width: 100%;
+}
+
+.product-data button:hover {
+  background-color: yellow;
+}
+
+.product-data button:focus {
+  outline: none;
+}
+
+.item-card img {
+  width: 100%;
 }
 
 .cart {

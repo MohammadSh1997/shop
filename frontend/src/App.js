@@ -1,7 +1,10 @@
-import React from 'react';
+import React , {useState} from 'react';
+import data from "./data.json"
+import Products from './components/Products';
 import './App.css';
 
 function App() {
+  const [products] = useState(data.products)
   return (
     <div className="App">
       <header className="header">
@@ -12,8 +15,9 @@ function App() {
       </header>
       <main className="main">
         <div className="content">
-          {/* test */}
-          <div className="products">this is products</div>
+          <div className="products">
+            <Products products= {products} />
+          </div>
           <div className="cart">this is cart</div>
         </div>
       </main>
