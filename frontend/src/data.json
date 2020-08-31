@@ -2,8 +2,51 @@
     "products": [
         {
             "_id": 1,
-            "name": "T-shirt",
-            "desc": "this is desc"
+            "image": "https://static.bershka.net/4/photos2/2020/I/0/1/p/7552/231/441/7552231441_1_1_3.jpg?t=1597327347510",
+            "title": "mini dress cold shirring detail",
+            "desc": "this is desc",
+            "availableSizes": ["XL" , "L"],
+            "price": 29.9
+        },
+        {
+            "_id": 2,
+            "image": "https://static.bershka.net/4/photos2/2020/I/0/1/p/2259/443/802/2259443802_1_1_3.jpg?t=1595218279311",
+            "title": "mini dress cold shirring detail",
+            "desc": "this is desc",
+            "availableSizes": ["XL" , "XXL"],
+            "price": 39.9
+        },
+        {
+            "_id": 3,
+            "image": "https://static.bershka.net/4/photos2/2020/I/0/1/p/1996/987/251/1996987251_1_1_3.jpg?t=1596122587861",
+            "title": "mini dress cold shirring detail",
+            "desc": "this is desc",
+            "availableSizes": ["XL" , "XXL"],
+            "price": 15.9
+        },
+        {
+            "_id": 4,
+            "image": "https://static.bershka.net/4/photos2/2020/I/0/1/p/2249/851/513/2249851513_1_1_3.jpg?t=1592410033851",
+            "title": "mini dress cold shirring detail",
+            "desc": "this is desc",
+            "availableSizes": ["XL" , "XXL"],
+            "price": 29.00
+        },
+        {
+            "_id": 5,
+            "image": "https://static.bershka.cn/4/photos2/2020/V/0/1/p/2239/033/250/2239033250_1_1_3.jpg?t=1583856704251",
+            "title": "mini dress cold shirring detail",
+            "desc": "this is desc",
+            "availableSizes": ["XL" , "XXL"],
+            "price": 20.0
+        },
+        {
+            "_id": 6,
+            "image": "https://www.refinery29.com/images/9512848.jpg",
+            "title": "mini dress cold shirring detail",
+            "desc": "this is desc",
+            "availableSizes": ["XL" , "XXL"],
+            "price": 25.0
         }
     ]
 }
