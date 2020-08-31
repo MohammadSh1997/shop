@@ -8,6 +8,7 @@ function App() {
         <h2>React Card Shopping</h2>
         <ul className="navbar">
           <li>Home</li>
+          {/* {TEST} */}
         </ul>
       </header>
       <main className="main">
