@@ -12,6 +12,7 @@ function App() {
       </header>
       <main className="main">
         <div className="content">
+          {/* test */}
           <div className="products">this is products</div>
           <div className="cart">this is cart</div>
         </div>
