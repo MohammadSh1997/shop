@@ -1,0 +1,9 @@
+{
+    "products": [
+        {
+            "_id": 1,
+            "name": "T-shirt",
+            "desc": "this is desc"
+        }
+    ]
+}

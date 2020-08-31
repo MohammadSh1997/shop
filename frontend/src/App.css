@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
+}
+
+body , #root {
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  display: grid;
+  grid-template-areas: "header" 
+  "main" 
+  "footer";
+  grid-template-rows:5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+header {
+  background-color: #203040;
+  grid-area: header;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  color: #fff;
+}
+
+.navbar {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li{
+  padding: 1rem;
+}
+
+main {
+  grid-area: main;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+}
+
+.products {
+  flex: 5;
+}
+
+.cart {
+  flex: 1;
+}
+
+footer {
+  background-color: #203040;
+  grid-area: footer;
+}
