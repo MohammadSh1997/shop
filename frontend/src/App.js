@@ -9,11 +9,18 @@ function App() {
   const [products , setProducts] = useState(data.products)
   const [size , setSize] = useState("")
   const [order , setOrder] = useState("")
-  const [cart , setCart] = useState([])
+  const [cart , setCart] = useState(localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")):[])
 
   useEffect(() => {
       setProducts([...products].sort((a,b)=>a._id < b._id ? 1 : -1))
   }, [])
+
+  const createOrder= (order)=> {
+    alert(order)
+    for (const key in order) {
+      console.log(key + order[key])
+    }
+  }
 
   const addToCart = (product)=> {
     let cartItems = cart.slice()
@@ -30,11 +37,14 @@ function App() {
       cartItems.push({...product , count: 1})
     }
     setCart(cartItems)
+    localStorage.setItem("cartItems" , JSON.stringify(cartItems))
   }
 
   const deleteFromCart = (item)=> {
     let newCart = cart.filter(el=> el._id !== item._id)
     setCart(newCart)
+    localStorage.setItem("cartItems" , JSON.stringify(newCart))
+
   }
 
   const handleOrder = (e) => {
@@ -83,6 +93,7 @@ function App() {
             <Cart
               cartItems={cart}
               deleteFromCart={deleteFromCart}
+              createOrder={createOrder}
             />
           </div>
         </div>
