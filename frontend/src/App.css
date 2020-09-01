@@ -139,6 +139,26 @@ main {
   padding: 5px;
 }
 
+.checking-form {
+  margin-top: 20px;
+}
+
+.checking-form form input {
+  border: 1px solid #333;
+  border-radius: 7px;
+  padding: 7px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.checking-form form button {
+  background-color: #ffc000;
+  border: 1px solid #333;
+  border-radius: 2px;
+  color: #333;
+  padding: 5px;
+}
+
 /* Products */
 .products-items {
   display: flex;
