@@ -55,6 +55,18 @@ main {
   flex: 5 1;
 }
 
+/* Filter */
+.filter {
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.filter p {
+  flex: 1;
+}
+
+/* Products */
 .products-items {
   display: flex;
   flex-wrap: wrap;
