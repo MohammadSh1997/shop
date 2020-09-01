@@ -10,7 +10,7 @@ function Products(props) {
                         <p className="product-title">{product.title}</p>
                         <div className="product-data">
                             <p className="product-price">${product.price}</p>
-                            <button className="product-button" > Add to cart </button>
+                            <button className="product-button" onClick={()=>props.addToCart(product)} > Add to cart </button>
                         </div>
                     </div>
                 )
