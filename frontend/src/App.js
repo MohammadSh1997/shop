@@ -3,18 +3,40 @@ import data from "./data.json"
 import Products from './components/Products';
 import './App.css';
 import Filter from './components/Filter';
+import Cart from './components/Cart';
 
 function App() {
   const [products , setProducts] = useState(data.products)
   const [size , setSize] = useState("")
   const [order , setOrder] = useState("")
+  const [cart , setCart] = useState([])
 
   useEffect(() => {
       setProducts([...products].sort((a,b)=>a._id < b._id ? 1 : -1))
-    return () => {
-      //
-    }
   }, [])
+
+  const addToCart = (product)=> {
+    let cartItems = cart.slice()
+    let alreadyInCart = false
+
+    cartItems.forEach(item => {
+      if (item._id === product._id) {
+        alreadyInCart= true
+        item.count++
+      }    
+    })
+
+    if (!alreadyInCart) {
+      cartItems.push({...product , count: 1})
+    }
+    setCart(cartItems)
+  }
+
+  const deleteFromCart = (item)=> {
+    let newCart = cart.filter(el=> el._id !== item._id)
+    setCart(newCart)
+  }
+
   const handleOrder = (e) => {
     setOrder(e.target.value)
     if (e.target.value === "high") {
@@ -55,9 +77,14 @@ function App() {
               handleFilter={handleFilter}
               handleOrder={handleOrder}
             />
-            <Products products= {products} />
+            <Products products= {products} addToCart={addToCart} />
           </div>
-          <div className="cart">this is cart</div>
+          <div className="sidebar">
+            <Cart
+              cartItems={cart}
+              deleteFromCart={deleteFromCart}
+            />
+          </div>
         </div>
       </main>
       <footer>This is footer</footer>
