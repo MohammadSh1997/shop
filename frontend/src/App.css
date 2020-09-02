@@ -205,6 +205,55 @@ main {
   flex: 1;
 }
 
+.product-modal {
+  display: flex;
+}
+
+.product-modal img {
+  max-height: 80vh;
+}
+
+.product-modal-desc {
+  margin-left: 20px;
+  flex: 1 1;
+}
+
+.product-modal-desc span {
+  background-color: #ffc000;
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+}
+
+.modal-close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.modal-product-desc {
+  margin: 30px 0;
+}
+
+.modal-product-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.modal-product-price p {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-product-price button {
+  background-color: #ffc000;
+  border: 1px solid #333;
+  color: #333;
+  width: 100%;
+}
+
+
 footer {
   background-color: #203040;
   grid-area: footer;
